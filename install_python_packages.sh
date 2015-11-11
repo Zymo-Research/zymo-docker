@@ -1,4 +1,4 @@
-pip install --no-cache-dir \
+pip install --no-cache-dir -U \
 python-dateutil \
 mysqlclient \
 django \
@@ -15,7 +15,7 @@ cython \
 pillow \
 biopython
 
-pip install --no-cache-dir \
+pip install --no-cache-dir -U \
 fastcluster \
 filechunkio \
 setuptools \
@@ -33,7 +33,9 @@ awscli \
 cutadapt \
 statsmodels \
 humanize \
-boto3 \
+boto3
+
+pip install --no-cache-dir -U \
 tables \
 funcsigs \
 matplotlib \

@@ -19,6 +19,7 @@ apt-get install -y \
     liblapack-dev \
     libhdf5-dev \
     samtools \
+    pkg-config \
     libfreetype6-dev \
     libpng-dev \
     libreadline6 \
