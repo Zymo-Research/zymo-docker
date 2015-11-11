@@ -31,6 +31,7 @@ apt-get clean autoclean && \
 apt-get autoremove -y
 
 ADD install_python_packages.sh /tmp/install_python_packages.sh
+
 RUN bash /tmp/install_python_packages.sh
 
 ENV DJANGO_SETTINGS_MODULE=EpiQuest_py.settings
