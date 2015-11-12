@@ -40,4 +40,5 @@ tables \
 funcsigs \
 matplotlib \
 seaborn \
-matplotlib-venn
+matplotlib-venn \
+certifi==2015.04.28
