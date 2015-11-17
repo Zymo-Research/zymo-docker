@@ -30,14 +30,14 @@ rm -rf /var/lib/apt/lists/* && \
 apt-get clean autoclean && \
 apt-get autoremove -y
 
-ADD install_python_packages.sh /tmp/install_python_packages.sh
-
+ADD install_bioinfo_packages.sh install_python_packages.sh /tmp/
+RUN bash /tmp/install_bioinfo_packages.sh
 RUN bash /tmp/install_python_packages.sh
 
 ENV DJANGO_SETTINGS_MODULE=EpiQuest_py.settings
-VOLUME /usr/share/EpiQuest_py
-ENV PYTHONPATH=${PYTHONPATH}:/usr/share/EpiQuest_py
-ENV TERM=xterm
+  PYTHONPATH=${PYTHONPATH}:/usr/share/EpiQuest_py
+  TERM=xterm
+  PATH=${PATH}:/usr/share/bowtie2:/usr/share/genomicTools
 
-VOLUME /mnt
+VOLUME ["/usr/share/EpiQuest_py", "/mnt"]
 WORKDIR /mnt
