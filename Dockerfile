@@ -34,9 +34,9 @@ ADD install_bioinfo_packages.sh install_python_packages.sh /tmp/
 RUN bash /tmp/install_bioinfo_packages.sh
 RUN bash /tmp/install_python_packages.sh
 
-ENV DJANGO_SETTINGS_MODULE=EpiQuest_py.settings
-  PYTHONPATH=${PYTHONPATH}:/usr/share/EpiQuest_py
-  TERM=xterm
+ENV DJANGO_SETTINGS_MODULE=EpiQuest_py.settings \
+  PYTHONPATH=${PYTHONPATH}:/usr/share/EpiQuest_py \
+  TERM=xterm \
   PATH=${PATH}:/usr/share/bowtie2:/usr/share/genomicTools
 
 VOLUME ["/usr/share/EpiQuest_py", "/mnt"]
