@@ -5,6 +5,7 @@ RUN apt-get update && \
 apt-get install -y \
   curl \
   zip \
+  samtools \
   python &&\
 rm -rf /var/lib/apt/lists/* && \
 apt-get clean autoclean && \
@@ -16,7 +17,6 @@ RUN curl -L \
   unzip bowtie2-2.2.6-linux-x86_64.zip &&\
   rm bowtie2-2.2.6-linux-x86_64.zip
 
-ENV BT2_HOME=/bowtie2-2.2.6 \
-    PATH=${PATH}:/bowtie2-2.2.6 \
+ENV PATH=${PATH}:/bowtie2-2.2.6 \
     TERM=xterm
 WORKDIR /mnt
