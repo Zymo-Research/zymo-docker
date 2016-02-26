@@ -24,6 +24,7 @@ apt-get install -y \
     libpng-dev \
     libreadline6 \
     libreadline6-dev \
+    zip \
     unzip \
     --no-install-recommends && \
 rm -rf /var/lib/apt/lists/* && \
